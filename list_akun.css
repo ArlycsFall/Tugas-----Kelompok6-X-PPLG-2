@@ -1,0 +1,371 @@
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #edf2f7;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Layout Utama */
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header Mobile */
+        .mobile-header {
+            display: none;
+            background-color: #2d3748;
+            color: white;
+            padding: 15px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+
+        .mobile-header h3 {
+            font-size: 1.2em;
+        }
+
+        .menu-toggle {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            background: #2d3748;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            height: 100vh;
+            transition: transform 0.3s ease;
+        }
+
+        .sidebar-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .sidebar h3 {
+            font-size: 1.2em;
+            line-height: 1.4;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 12px 0;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #7c7c7c;
+            opacity: 90%;
+            color: #ffd700;
+            padding-left: 10px;
+        }
+
+        /* Main Content */
+        .main {
+            flex: 1;
+            padding: 20px;
+            margin-left: 250px;
+            transition: margin 0.3s ease;
+        }
+
+        /* Top Bar */
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        /* Profile Dropdown */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .profile:hover {
+            background-color: #eee;
+        }
+
+        .profile img {
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #fff;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown-divider {
+            height: 1px;
+            background-color: #eee;
+            margin: 0;
+        }
+
+        .logout-btn {
+            color: #e74c3c !important;
+            font-weight: bold;
+        }
+
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #a6a6a7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .show {
+            display: block;
+        }
+
+        /* Help Button */
+        .help {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            z-index: 100;
+        }
+
+        .help:hover {
+            background-color: #c0392b;
+        }
+
+        /* Content Styles */
+        .content-header {
+            margin-bottom: 20px;
+        }
+
+        .content-header h1 {
+            color: #2d3748;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        /* Form Filter Styles */
+        .filter-form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .filter-form label {
+            display: inline-block;
+            margin-right: 20px;
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        .filter-form select {
+            padding: 8px 12px;
+            border: 1px solid #cbd5e0;
+            border-radius: 4px;
+            font-size: 14px;
+            margin-left: 8px;
+            background: white;
+        }
+
+        .filter-form select:focus {
+            outline: none;
+            border-color: #4299e1;
+            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+        }
+
+        /* Table Styles */
+        .table-container {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: none;
+        }
+
+        th {
+            background-color: #2d3748;
+            color: white;
+            padding: 15px 12px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: 1px solid #f4f4f4;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #2d372d;
+            font-size: 14px;
+        }
+
+        tr:hover {
+            background-color: #f4f4f4;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Status Badge */
+        .status-badge {
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .status-aktif {
+            background-color: #c6f6d5;
+            color: #22543d;
+        }
+
+        .status-lulus {
+            background-color: #bee3f8;
+            color: #1a365d;
+        }
+
+        .status-keluar {
+            background-color: #fed7d7;
+            color: #742a2a;
+        }
+
+        /* Role Badge */
+        .role-badge {
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .role-guru {
+            background-color: #fff700;
+            color: #1e1e1e;
+        }
+
+        .role-siswa {
+            background-color: #c6f6d5;
+            color: #22543d;
+        }
+        
+        .role-admin {
+            background-color: #000000;
+            color: #ffda06;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .mobile-header {
+                display: flex;
+            }
+
+            .sidebar {
+                transform: translateX(-100%);
+                z-index: 1000;
+            }
+
+            .sidebar.active {
+                transform: translateX(0);
+            }
+
+            .main {
+                margin-left: 0;
+            }
+
+            .filter-form label {
+                display: block;
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+
+            .filter-form select {
+                margin-left: 0;
+                width: 100%;
+            }
+
+            table {
+                font-size: 12px;
+            }
+
+            th, td {
+                padding: 8px 6px;
+            }
+        }
