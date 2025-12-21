@@ -1,2 +1,2 @@
 # Tugas-----Kelompok6-X-PPLG-2
-ga tau ah males
+TUgas PHP kelas 10
